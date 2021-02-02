@@ -4,6 +4,9 @@ import './registerServiceWorker';
 import router from './router';
 import store from './store';
 
+import './assets/normalize.css';
+import './assets/flexboxgrid.min.css';
+
 Vue.config.productionTip = false;
 
 new Vue({

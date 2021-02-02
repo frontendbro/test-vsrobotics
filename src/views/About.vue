@@ -1,5 +1,21 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <Logo />
+      </div>
+      <div class="col-md-3">2</div>
+      <div class="col-md-3">3</div>
+      <div class="col-md-3">4</div>
+    </div>
   </div>
 </template>
+
+<script>
+import Logo from '@/assets/image/logo.svg';
+
+export default {
+  name: 'About',
+  components: { Logo },
+};
+</script>
