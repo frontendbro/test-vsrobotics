@@ -1,0 +1,115 @@
+// colors
+$white: #fff;
+$green: #53AD59;
+$black: #25282B;
+$black-01: #52575C;
+$gray: #E8E8E8;
+$gray-02: #DADADA;
+$gray-03: #CACCCF;
+$gray-01: #909497;
+$blue: #388BF2;
+$orange: #FC8338;
+
+// mixin
+@mixin clear-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+$box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+
+
+
+// Media
+// Extra small screen / phone
+$screen-phone: 320px;
+
+$screen-normal-phone: 375px;
+
+// Small screen / tablet
+$screen-tablet: 768px;
+
+// Large screen / wide desktop
+$screen-desktop: 1024px;
+
+// max desktop
+$screen-xl: 1440px;
+
+::export {
+  $screen-phone: $screen-phone;
+  $screen-tablet: $screen-tablet;
+  $screen-desktop: $screen-desktop;
+  $screen-xl: $screen-xl;
+}
+
+@mixin media-min-xl {
+  @media screen and (min-width: $screen-xl + 1) {
+    @content;
+  }
+}
+
+@mixin media-min-lg {
+  @media screen and (min-width: $screen-desktop + 1) {
+    @content;
+  }
+}
+
+@mixin media-min-md {
+  @media screen and (min-width: $screen-tablet + 1) {
+    @content;
+  }
+}
+
+@mixin media-min-sm {
+  @media screen and (min-width: $screen-normal-phone + 1) {
+    @content;
+  }
+}
+
+@mixin media-min-xs {
+  @media screen and (min-width: $screen-phone) {
+    @content;
+  }
+}
+
+@mixin media-max-xl {
+  @media screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin media-max-lg {
+  @media screen and (max-width: $screen-desktop) {
+    @content;
+  }
+}
+
+@mixin media-max-md {
+  @media screen and (max-width: $screen-tablet) {
+    @content;
+  }
+}
+
+@mixin media-max-sm {
+  @media screen and (max-width: $screen-normal-phone) {
+    @content;
+  }
+}
+
+@mixin media-max-xs {
+  @media screen and (max-width: $screen-phone) {
+    @content;
+  }
+}

@@ -1,4 +1,11 @@
 module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: '@import "~@/styles/var.scss";'
+      }
+    }
+  },
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg');
 
@@ -10,5 +17,5 @@ module.exports = {
       .end()
       .use('vue-svg-loader')
       .loader('vue-svg-loader');
-  },
+  }
 };

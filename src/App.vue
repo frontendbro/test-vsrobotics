@@ -22,10 +22,9 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import 'style/main';
-
+<style lang="scss">
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1920px;
 }
 </style>

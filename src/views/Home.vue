@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container home">
+    <div class="row">
+      <div class="col">
+        <div class="home__title">Реализация непрофильных и залоговых активов</div>
+        <TabsField />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import TabsField from '@/components/TabsField.vue';
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld,
-  },
+  components: { TabsField }
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  &__title {
+    color: $white;
+  }
+}
+</style>
